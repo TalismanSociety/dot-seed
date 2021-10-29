@@ -9,11 +9,11 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById("valid").innerText = "valid mnemonic: " + mnemonicValidate(mnemonic);
 
     const obj = {
-        type: 'HD Key Tree',
+        type: 'HD Key Tree', // MM uses it to distinguish between single keys and HD seeds
         data: {
             mnemonic: mnemonic,
             numberOfAccounts: 1,
-            hdPath: null,
+            hdPath: 'm/44\'/354\'/account\'/0\'/0\'', // (ledger live path as an example) suppose this would have a default but could be overridden by a power user
         }
     };
     const password = "password";
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById("decrypted").innerText = "Decrypted: " + JSON.stringify(result);
         });
 
-})
+});
 
 // return this.addNewKeyring('HD Key Tree', {
 //     mnemonic: seed,
