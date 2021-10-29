@@ -1,0 +1,20 @@
+{
+  "name": "dot-seed",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "bundle": "browserify index.js -p esmify > bundle.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@polkadot/util-crypto": "^7.6.1",
+    "browser-passworder": "^2.0.3"
+  },
+  "devDependencies": {
+    "esmify": "^2.1.1",
+    "browser-resolve": "^2.0.0"
+  }
+}
